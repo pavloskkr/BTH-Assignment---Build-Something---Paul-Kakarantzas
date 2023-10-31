@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: firebaseauthms-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: firebaseauthms
+  template:
+    metadata:
+      labels:
+        app: firebaseauthms
+    spec:
+      containers:
+        - name: firebaseauthms
+          image: pavloskkr/firebaseauthms:latest
+          ports:
+            - containerPort: 9001
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: firebaseauthms-service
+spec:
+  selector:
+    app: firebaseauthms
+  ports:
+    - protocol: TCP
+      port: 9001
+      targetPort: 9001
+  type: LoadBalancer
