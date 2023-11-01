@@ -4,7 +4,7 @@
 <img src="img/SWADiagram_Finished.png" align="center" alt="BTH-Assignment" height="370">
 </p>
 <br>
-## Software General Concept 
+### Software General Concept 
 
 The software I have implemented is a dynamic and innovative platform, currently in its initial stages of development, which draws inspiration from successful online food delivery services.
 It serves as a location-based 'marketplace' for health and wellness services, including hair salons, massage centers, and pet grooming stores. Users can effortlessly book appointments through
